@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Example.Pages.ConTemperaturaPage"
+             NavigationPage.HasNavigationBar="False">
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid BackgroundColor="#CF0A2C">
+                <StackLayout VerticalOptions="Center"
+                             Spacing="40">
+                    <StackLayout Orientation="Horizontal"
+                                 Margin="8">
+                        <Image Source="logo.png"
+                               WidthRequest="100"
+                               HeightRequest="50"
+                               Margin="5" />
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="Center">
+                        <Label Text="{Binding caf}"
+                               TextColor="Black"
+                               FontSize="30"
+                               FontAttributes="Bold"
+                               Margin="0,5,0,5"
+                               VerticalOptions="Center" />
+                    </StackLayout>
+                    <Image Source="termometro.png"
+                           WidthRequest="150"
+                           HeightRequest="150"
+                           Margin="8" />
+                    <Frame>
+                        <Entry Text="{Binding Centigrade}"
+                               Keyboard="Numeric"
+                               Placeholder="Centigrados (°C)"
+                               TextColor="Black"
+                               FontSize="Large" />
+                    </Frame>
+                    <Button Text="Calcular"
+                            CornerRadius="10"
+                            FontSize="Large"
+                            FontAttributes="Bold"
+                            Margin="0,20,0,20"
+                            TextTransform="None"
+                            BackgroundColor="red"
+                            TextColor="Black"
+                            Command="{Binding Calculat}" />
+                    <StackLayout Orientation="Horizontal"
+                                 HorizontalOptions="Center">
+                        <Label Text="Resultado"
+                               FontSize="Large"
+                               FontAttributes="Bold"
+                               VerticalOptions="Center"
+                               TextColor="Black" />
+                        <Label Text="{Binding Fahrenheit, StringFormat=': {0:F2}'}"
+                               FontSize="Large"
+                               FontAttributes="Bold"
+                               VerticalOptions="Center"
+                               TextColor="Black" />
+                    </StackLayout>
+                    <Button Text="Volver"
+                            TextTransform="None"
+                            BackgroundColor="White"
+                            TextColor="Black"
+                            FontSize="Large"
+                            FontAttributes="Bold"
+                            HorizontalOptions="Center"
+                            CornerRadius="10"
+                            Command="{Binding ComeToLoginT}" />
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

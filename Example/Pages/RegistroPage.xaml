@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Example.Pages.RegistroPage"
+             NavigationPage.HasNavigationBar="False">
+    <StackLayout  BackgroundColor="#CF0A2C">
+        <StackLayout Orientation="Horizontal"
+                     Spacing="5">
+            <Image Source="logo.png"
+                   WidthRequest="100"
+                   HeightRequest="50"
+                   Margin="5" />
+        </StackLayout>
+        <StackLayout HorizontalOptions="Center">
+            <Label Text="{Binding Registro}"
+                   TextColor="Black"
+                   FontSize="30"
+                   FontAttributes="Bold"
+                   Margin="0,8,0,8"
+                   VerticalOptions="Center" />
+        </StackLayout>
+        <Frame VerticalOptions="FillAndExpand"
+               Margin="8"
+               CornerRadius="20"
+               HasShadow="False">
+            <StackLayout VerticalOptions="Center"
+                         Spacing="20">
+                <Entry Placeholder="Ingrese su usuario"
+                       Text="{Binding Name }"
+                       TextColor="Black"
+                       FontSize="Large" />
+                <Entry Placeholder="Ingrese su Documento"
+                       Text="{Binding Document}"
+                       Keyboard="Numeric"
+                       TextColor="Black"
+                       FontSize="Large" />
+                <Entry Placeholder="Ingrese su contraseña"
+                       Text="{Binding Password}"
+                       IsPassword="True"
+                       TextColor="Black"
+                       FontSize="Large" />
+                <Entry Placeholder="Ingrese su Rol"
+                       Text="{Binding Rol}"
+                       TextColor="Black"
+                       FontSize="Large" />
+                <Button Text="Registrar"
+                        TextTransform="None"
+                        Margin="0,20,0,20"
+                        BackgroundColor="Red"
+                        CornerRadius="10"
+                        FontSize="Large"
+                        FontAttributes="Bold"
+                        Command="{Binding RegistrarUser}" />
+            </StackLayout>
+        </Frame>
+        <Button Text="Volver"
+                TextTransform="None"
+                BackgroundColor="White"
+                TextColor="Black"
+                Margin="0,20,0,20"
+                FontSize="Large"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                CornerRadius="10"
+                Command="{Binding ComeToLoginR}" /> 
+    </StackLayout>
+</ContentPage>

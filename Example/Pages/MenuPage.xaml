@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Example.Pages.MenuPage"
+             NavigationPage.HasNavigationBar="False">
+    
+    <StackLayout  BackgroundColor="#CF0A2C">
+        <StackLayout Orientation="Horizontal"
+                     Spacing="5">
+            <Image Source="logo.png"
+                   WidthRequest="100"
+                   HeightRequest="50"
+                   Margin="5" />
+        </StackLayout>
+        <StackLayout HorizontalOptions="Center">
+            <Label Text="{Binding Menu}"
+                   TextColor="Black"
+                   FontSize="30"
+                   FontAttributes="Bold"
+                   Margin="0,8,0,8"
+                   VerticalOptions="Center" />
+        </StackLayout>
+        <Frame VerticalOptions="FillAndExpand"
+               Margin="8"
+               CornerRadius="20"
+               HasShadow="False">
+            <StackLayout VerticalOptions="Center"
+                         Spacing="10">
+                <Button Text="Convertidor de Cm a m"
+                        TextTransform="None"
+                        Margin="0,20,0,20"
+                        BackgroundColor="Red"
+                        CornerRadius="10"
+                        FontSize="Large"
+                        FontAttributes="Bold"
+                        Command="{Binding GoToConvert}" />
+                <Button Text="Convertidor de C° a f"
+                        TextTransform="None"
+                        Margin="0,20,0,20"
+                        BackgroundColor="Red"
+                        CornerRadius="10"
+                        FontSize="Large"
+                        FontAttributes="Bold"
+                        Command="{Binding GoToTemperature}" />
+                <Button Text="Importar Excel"
+                        TextTransform="None"
+                        Margin="0,20,0,20"
+                        BackgroundColor="Red"
+                        CornerRadius="10"
+                        FontSize="Large"
+                        FontAttributes="Bold"
+                        Command="{Binding GoToExcel}" />
+            </StackLayout>
+        </Frame>
+        <Button Text="Cerrar sesion "
+            TextTransform="None"
+            BackgroundColor="White"
+            TextColor="Black"
+            Margin="0,20,0,20"
+            FontSize="Large"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"
+            CornerRadius="10"
+            Command="{Binding Logout}" />
+    </StackLayout>
+</ContentPage>
